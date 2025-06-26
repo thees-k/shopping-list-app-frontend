@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build && ./rollout.sh",
-    "preview": "vite preview"
+    "build": "tsc && vite build && ./rollout.sh"
   },
   "devDependencies": {
     "typescript": "~5.7.2",
