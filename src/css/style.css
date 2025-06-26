@@ -1,0 +1,171 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.offscreen {
+    position: absolute;
+    left: -10000px;
+}
+
+input, 
+button {
+    font: inherit;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #252627;
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 1;
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+section {
+    border: 1px solid #fdf7e7;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.button {
+    border-radius: 10px;
+    min-width: 48px;
+    min-height: 48px;
+    font-weight: bold;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.actionSelect {    
+    position: sticky;
+    top: 0;
+    margin-bottom: 1em;
+}
+
+.actionSelect_form {    
+    display: flex;
+    gap: 0.25em;
+}
+
+.actions {
+    flex-grow: 1;
+    font-size: 2em;
+    font-weight: bold;
+    padding: 0.5em;
+    cursor: pointer;
+    color: #1a73e8;
+}
+
+#newItemEntry {
+    display: none;
+    top: 0;
+    margin-top: 1em;
+}
+
+.newItemEntry_form {
+    display: flex;
+    gap: 0.25em;
+    font-size: 1.5em;
+}
+
+.newItemEntry_input {
+    flex-grow: 1;
+    border: 2px solid #fdf7e7;
+    border-radius: 10px;
+    padding: 0.5em;
+}
+
+.newItemEntry_button {
+    background-color: transparent;
+    color: #fdf7e7;
+    border: 3px dashed #fdf7e7;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.newItemEntry_button:hover,
+.newItemEntry_button:focus {
+    color: #18864b;
+}
+
+.listContainer {
+    font-size: 1.5em;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column;
+    gap: 1em;
+}
+
+.listTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.listItems {
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    list-style-type: none;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1em;
+    gap: 1em;
+}
+
+.item > input[type="checkbox"] {
+    text-align: center;
+    min-width: 2.0em;
+    min-height: 2.0em;
+    cursor: pointer;
+}
+
+.item > input[type="checkbox"]:checked + div {
+    text-decoration: line-through;
+}
+
+.item > div {
+    flex-grow: 1;
+    cursor: pointer;
+    word-break: break-all;
+}
+
+.disabledCheckbox {
+   opacity: 0.7; /* Reduce the opacity of the checkbox */
+   cursor: not-allowed; /* Change the cursor to indicate that the checkbox is disabled */
+   pointer-events: none; /* Disable pointer events to prevent user interaction */
+}
+
+.deleteButton {
+    color: #dc461d;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 1em;
+    }
+    .newItemEntry_form {
+        gap: 0.5em;
+    }
+}
